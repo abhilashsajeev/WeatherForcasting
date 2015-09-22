@@ -1,0 +1,21 @@
+{
+  "name": "WetherForcasting",
+  "version": "0.0.1",
+  "homepage": "https://github.com/abhilashsajeev/WetherForcasting",
+  "authors": [
+    "abhilash <abhilash@qburst.com>"
+  ],
+  "description": "Simple wether forcating SPA",
+  "main": "app.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
