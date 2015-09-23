@@ -8,19 +8,9 @@ Days : <a href="#/forcast/2" ng-class="{'bg-primary': days==='2'}">2</a> | <a hr
 <div ng-repeat="w in weatherResult.list" >
 	<div class="row">
 		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">{{convertToDate(w.dt) | date:'d MMM y'}}</h3>
-				</div>
-				<div class="panel-body">
-					<div class="col-md-12">
-						Daytime Temprature : {{w.temp.day}}
-					</div>
-					<div class="col-md-12" ng-repeat="weather in w.weather">
-						Weather Description : {{weather.description}}
-					</div>
-				</div>
-			</div>
+			<weather-report weather-day="w"
+			convert-to-date="convertToDate(dt)" 
+			date-format = "d MMM, y"></weather-report>
 		</div>		
 	</div>
 </div>
