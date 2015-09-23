@@ -2,14 +2,14 @@
 	<a href="#/" class="btn btn-warning">Back to search</a>
 </p>
 
-Forcast for {{city}}
+Forcast for {{forcast.city}}
 <hr/>
-Days : <a href="#/forcast/2" ng-class="{'bg-primary': days==='2'}">2</a> | <a href="#/forcast/5" ng-class="{'bg-primary': days==='5'}">5</a>| <a href="#/forcast/7" ng-class="{'bg-primary': days==='7'}">7</a>
-<div ng-repeat="w in weatherResult.list" >
+Days : <a href="#/forcast/2" ng-class="{'bg-primary': forcast.days==='2'}">2</a> | <a href="#/forcast/5" ng-class="{'bg-primary': forcast.days==='5'}">5</a>| <a href="#/forcast/7" ng-class="{'bg-primary': forcast.days==='7'}">7</a>
+<div ng-repeat="w in forcast.weatherResult.list" >
 	<div class="row">
 		<div class="col-md-12">
 			<weather-report weather-day="w"
-			convert-to-date="convertToDate(dt)" 
+			convert-to-date="forcast.convertToDate(dt)" 
 			date-format = "d MMM, y"></weather-report>
 		</div>		
 	</div>
