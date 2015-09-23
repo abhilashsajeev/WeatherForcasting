@@ -1,2 +1,2 @@
-# WetherForcasting
-AngularJS APP for wether forcasting
+# WeatherForcasting
+AngularJS APP for weather forcasting
