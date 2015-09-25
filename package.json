@@ -1,0 +1,57 @@
+{
+  "name": "weatherforcasting",
+  "version": "0.0.1",
+  "description": "Angularjs SPA for weather forcasting",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "browserify": "^11.1.0",
+    "browserify-ngannotate": "^1.0.1",
+    "chai": "^3.3.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-cachebust": "^0.0.6",
+    "gulp-install": "^0.5.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "gulp-webserver": "^0.9.1",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.13.10",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^0.5.2",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-requirejs": "^0.2.2",
+    "karma-sinon": "^1.0.4",
+    "karma-sinon-chai": "^1.1.0",
+    "mocha": "^2.3.3",
+    "phantomjs": "^1.9.18",
+    "requirejs": "^2.1.20",
+    "sinon": "^1.17.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "test": " ./node_modules/karma/bin/karma  start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhilashsajeev/WetherForcasting.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Abhilash abhilash@qburst.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhilashsajeev/WetherForcasting/issues"
+  },
+  "homepage": "https://github.com/abhilashsajeev/WetherForcasting#readme"
+}
