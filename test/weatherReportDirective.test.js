@@ -16,13 +16,12 @@ describe('WeatherReport',function () {
 		scope.convertToDate = sinon.spy();
 		scope.dateFormat = "d MMM, y";
 
-		el = angular.element('<weather-report />');
+		el = angular.element('<weather-report weather-day="weatherDay" convert-to-date = "convertToDate()" date-format="dateFormat"/>');
 		$compile(el)(scope);
 		scope.$digest();
 	}));
-	it('Should bind the data',function () {
-		console.log(el.children('.col-md-12'));
-		expect(el.children('.col-md-12')[0].text()).to.equal('Daytime Temprature : 2')
+	it('Should applied template',function () {
+		expect(el.html()).to.not.equal('');
 	});
 
 });

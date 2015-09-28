@@ -35,9 +35,10 @@ module.exports = function(config) {
     },
 
     coverageReporter: {
-      // type : 'html',
-      type : 'text-summary',
-      dir : 'coverage/'
+      type : 'html',
+      // type : 'text-summary',
+      dir : 'coverage/',
+      file : 'coverage.html'
     },
     ngHtml2JsPreprocessor: {
       moduleName: 'weatherReport'

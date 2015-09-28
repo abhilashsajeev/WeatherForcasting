@@ -16,14 +16,32 @@ describe('forcastController', function() {
   		expect(forcastController).to.exist;
   	});
 
-    it('Should contain city name same as that of cityService',function () {
-        expect(forcastController.city).to.exist;
-        expect(forcastController.city).to.equal('NewYork, NY');
+    describe('Checking default params',function () {
+      beforeEach(inject(function($controller){
+        forcastController = $controller('forcastController', {
+          $scope:scope,
+          $location:locationMock,
+        });  
+      }));
+
+      it('Default number of days should be set if route params is empty', function(){
+        expect(forcastController.days).to.equal(2);
+      });
+
+      it('Should call weatherdays with default params', function(){
+        expect(weatherServiceMock.getWeather.called).to.be.true;
+        expect(weatherServiceMock.getWeather.calledWith('NewYork, NY',2));
+      });
     });
 
     it('Days should be valid number',function () {
         assert.isNumber(forcastController.days);
         expect(forcastController.days).to.equal(5);
+    });
+
+    it('Should contain city name same as that of cityService',function () {
+        expect(forcastController.city).to.exist;
+        expect(forcastController.city).to.equal('NewYork, NY');
     });
 
     it('weatherService should be atLeast called once',function () {
