@@ -21,7 +21,7 @@ describe('HomeController',function () {
 
   	it('Should chage location on submit',function(){
   		homeController.submit();
-  		expect(locationMock.path.calledWith('/forcast')).to.be.true
+  		expect(locationMock.path.calledWith('/forcast')).to.be.true;
   	})
 
   	function initMocks($provide) {

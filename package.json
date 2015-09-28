@@ -36,6 +36,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-ng-html2js-preprocessor": "^0.1.2",
     "mocha": "^2.3.3"
   },
   "scripts": {

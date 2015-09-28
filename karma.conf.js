@@ -17,7 +17,8 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.min.js',
       'bower_components/angular-resource/angular-resource.js',
       'src/*.js',
-      'test/*.test.js'
+      'test/*.test.js',
+      'directives/weatherReport.html'
     ],
 
 
@@ -29,13 +30,17 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/*.js': ['coverage']
+      'src/*.js': ['coverage'],
+      'directives/*.html':['ng-html2js']
     },
 
     coverageReporter: {
       // type : 'html',
       type : 'text-summary',
       dir : 'coverage/'
+    },
+    ngHtml2JsPreprocessor: {
+      moduleName: 'weatherReport'
     },
 
 
