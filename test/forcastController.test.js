@@ -51,7 +51,8 @@ describe('forcastController', function() {
 
     it('Should convert milli seconds to date',function(){
         expect(forcastController.convertToDate).to.exist;
-        expect(forcastController.convertToDate(1443182050668).toString()).to.equal('Tue Aug 15 47702 04:27:48 GMT+0530 (IST)');
+        var date = new Date(1443182050668 * 1000);
+        expect(forcastController.convertToDate(1443182050668).toString()).to.equal(date.toString());
     });
 
   	function initMocks($provide) {
