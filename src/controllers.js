@@ -9,7 +9,7 @@ weatherApp.controller('homeController', ['$scope', 'cityService','$location', fu
     function submit () {
       $location.path('/forcast');
     };
-    $scope.$watch('vm.city',function(){
+    $scope.$watch('home.city',function(){
       cityService.city = vm.city;
     });
   }(this));
