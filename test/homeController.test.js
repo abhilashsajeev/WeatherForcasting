@@ -2,7 +2,7 @@
 
 describe('HomeController',function () {
 	var homeController,cityServiceMock,scope,locationMock;
-	beforeEach(module('weatherApp'));
+	beforeEach(module('weatherApp')); // Module in required before the controller is injected
 	beforeEach(module(initMocks));
   	beforeEach(inject(initController));
   	
