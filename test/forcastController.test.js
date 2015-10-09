@@ -10,7 +10,7 @@ describe('forcastController', function() {
 
 	beforeEach(module('weatherApp'));
 	beforeEach(module(initMocks));
-  	beforeEach(inject(initController));
+  	beforeEach(inject(initController)); // Inject function is created by angular mocks
 
   	it('Should exist',function () {
   		expect(forcastController).to.exist;
@@ -62,7 +62,7 @@ describe('forcastController', function() {
   		weatherServiceMock = sinon.stub({
             getWeather:function(){}
         })
-	 	$provide.factory('cityService', function () {
+	 	$provide.factory('cityService', function () { // to Provide services mock using $provide function
 	      return cityServiceMock;
 	    });
 	    $provide.factory('weatherService', function () {

@@ -5,7 +5,7 @@ describe('WeatherReport',function () {
 	beforeEach(module('weatherApp'));
 	beforeEach(module('weatherReport'));
 	beforeEach(inject(function ($compile, $rootScope) {
-		var scope = $rootScope;
+		var scope = $rootScope; // Note: Directives test should use rootScope directly otherwise fails
 		scope.weatherDay = {
 			dt:1443182050668,
 			temp:{
