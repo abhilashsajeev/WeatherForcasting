@@ -12,7 +12,7 @@ describe('weatherService',function () {
 	describe('getWeather',function(){
 		it('should make request',inject(function(weatherService){// note the inject function
 			// httpBackend in a service mock for ngResource
-            $httpBackend.whenJSONP('http://api.openweathermap.org/data/2.5/forecast/daily?callback=JSON_CALLBACK&cnt=2&q=test&units=metric&appid=bd82977b86bf27fb59a04b61b657fb6f')
+            $httpBackend.whenJSONP('http://api.openweathermap.org/data/2.5/forecast/daily?appid=bd82977b86bf27fb59a04b61b657fb6f&callback=JSON_CALLBACK&cnt=2&q=test&units=metric')
             .respond({
                 username: 'test'
             });
